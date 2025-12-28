@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-Hant"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;國際勃起功能指數簡式問卷（IIEF-5）&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 900px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1, h2, h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>p.description {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 3px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.question-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.option-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fafafa;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.option-label input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.score-hint {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #777;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.actions {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.15s ease, box-shadow 0.15s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.primary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #1976d2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.primary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #1565c0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 6px rgba(0,0,0,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.secondary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #d5d5d5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #c5cae9;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result-line {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.severity-none {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #2e7d32;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.severity-mild,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.severity-mild-moderate {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #f9a825;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.severity-moderate,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.severity-severe {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #c62828;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-note {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #888;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.error {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #c62828;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;國際勃起功能指數簡式問卷（IIEF-5）&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="description"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>本問卷旨在評估過去六個月內您的勃起功能狀況。請根據實際情況，選出最符合您狀況的答案。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>此工具僅供初步評估與研究之用，無法取代專業醫療診斷。如有疑慮，請諮詢專科醫師。</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="iiefForm"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Question 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="question-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第 1 題：您對於陰莖能夠達到且維持勃起的信心程度如何？</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q1" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;非常低（1 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q1" value="2" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;低（2 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q1" value="3" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;中度（3 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q1" value="4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;高（4 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q1" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;非常高（5 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-hint"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本題得分範圍：1–5 分。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error" id="error-q1" style="display:none;"&gt;請回答本題。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Question 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="question-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第 2 題：當您受到性刺激而勃起時，勃起硬度足夠進入陰道的次數如何？</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;沒有性行為（0 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;幾乎或完全不可以（1 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="2" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;少數幾次可以（2 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="3" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;一半左右可以（3 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;多數可以（4 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q2" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;幾乎每次都可以（5 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-hint"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本題得分範圍：0–5 分。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error" id="error-q2" style="display:none;"&gt;請回答本題。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Question 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="question-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第 3 題：在性行為中，您進入陰道後能夠維持勃起的次數如何？</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;沒有性行為（0 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;幾乎或完全不可以（1 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="2" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;少數幾次可以（2 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="3" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;一半左右可以（3 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;多數可以（4 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q3" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;幾乎每次都可以（5 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-hint"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本題得分範圍：0–5 分。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error" id="error-q3" style="display:none;"&gt;請回答本題。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Question 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="question-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第 4 題：在性行為中，您能維持勃起到完成行房有多困難？</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;沒有性行為（0 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;極度困難（1 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="2" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;非常困難（2 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="3" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;困難（3 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;有點困難（4 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q4" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;不困難（5 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-hint"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本題得分範圍：0–5 分。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error" id="error-q4" style="display:none;"&gt;請回答本題。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Question 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="question-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第 5 題：當您嘗試性行為時，您能滿意的次數如何？</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;沒有性行為（0 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;極度不滿意（1 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="2" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;少數幾次滿意（2 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="3" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;一半左右滿意（3 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="4" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;多數滿意（4 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label class="option-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="radio" name="q5" value="5" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;幾乎每次都滿意（5 分）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-hint"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本題得分範圍：0–5 分。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error" id="error-q5" style="display:none;"&gt;請回答本題。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="actions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" class="primary" onclick="calculateScore()"&gt;計算總分&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;button type="button" class="secondary" onclick="resetForm()"&gt;全部重設&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="result" class="result" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="result-title"&gt;結果&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="result-line" id="result-score"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="result-line" id="result-category"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="result-line" id="result-note"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-note"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>說明：IIEF-5 總分範圍為 5–25 分（部分選項為 0 分）。分數越低，代表勃起功能障礙程度可能越嚴重。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>本問卷結果僅供參考，無法作為診斷依據。如對性功能或健康有疑慮，請尋求專業醫療協助。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function clearErrors() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 1; i &lt;= 5; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const errEl = document.getElementById("error-q" + i);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (errEl) errEl.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateScore() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearErrors();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const form = document.getElementById("iiefForm");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let total = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let valid = true;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 1; i &lt;= 5; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const selected = form.querySelector('input[name="q' + i + '"]:checked');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!selected) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>valid = false;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const errEl = document.getElementById("error-q" + i);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (errEl) errEl.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>total += parseInt(selected.value, 10);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resultBox = document.getElementById("result");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const scoreEl = document.getElementById("result-score");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const categoryEl = document.getElementById("result-category");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const noteEl = document.getElementById("result-note");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!valid) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultBox.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Determine category</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let categoryText = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let categoryClass = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let noteText =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"建議與專業醫療人員討論結果，以獲得進一步評估與建議。";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (total &gt;= 22 &amp;&amp; total &lt;= 25) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "無勃起功能障礙";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryClass = "severity-none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (total &gt;= 17 &amp;&amp; total &lt;= 21) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "輕度勃起功能障礙";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryClass = "severity-mild";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (total &gt;= 12 &amp;&amp; total &lt;= 16) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "輕度至中度勃起功能障礙";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryClass = "severity-mild-moderate";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (total &gt;= 8 &amp;&amp; total &lt;= 11) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "中度勃起功能障礙";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryClass = "severity-moderate";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (total &gt;= 5 &amp;&amp; total &lt;= 7) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "重度勃起功能障礙";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryClass = "severity-severe";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>categoryText = "分數超出一般量表範圍，請確認作答。";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>noteText = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>scoreEl.textContent = "您的總分為：" + total + " 分（理論範圍約 5–25 分）";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>categoryEl.textContent = "初步評估結果：" + categoryText;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>categoryEl.className = "result-line " + categoryClass;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>noteEl.textContent = noteText;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>resultBox.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function resetForm() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const form = document.getElementById("iiefForm");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>form.reset();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearErrors();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resultBox = document.getElementById("result");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>resultBox.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
